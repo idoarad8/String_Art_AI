@@ -8,13 +8,14 @@ import matplotlib.pyplot as plt
 def main():
     # Example: Create string art from an image
     # Replace 'your_image.jpg' with the path to your image
-    image_path = './Test_images/square.png'  # Change this to your image path
+    image_path = './Test_images/Whiter.jpg'  # Change this to your image path
     
     # Create generator with 300 nails and 500x500 image size
     generator = StringArtGenerator(
         image_path=image_path,
-        num_nails=300,      # Number of nails in the circle
+        num_nails=500,      # Number of nails in the circle
         image_size=500,    # Size of processed image
+        use_gpu = False
     )
     
     # Generate the string art
@@ -22,7 +23,7 @@ def main():
     # min_distance: minimum nail distance (avoid adjacent nails)
     # max_distance: maximum nail distance (None = no limit)
     nail_sequence = generator.generate_string_art(
-        num_iterations=5000,
+        num_iterations=3000,
         min_distance=10,
         max_distance=None
     )
