@@ -3,3 +3,20 @@ Pillow>=8.0.0
 matplotlib>=3.5.0
 scipy>=1.7.0
 scikit-image>=0.18.0
+
+# PyTorch Installation:
+# The torch package below installs CPU-only version by default.
+# For GPU support, install PyTorch with CUDA AFTER installing other packages:
+#
+# For CUDA 11.8 (common):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# For CUDA 12.1:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# To check your CUDA version:
+#   nvidia-smi  (shows CUDA version at top)
+#   python test_gpu.py  (runs GPU compatibility test)
+#
+# CPU-only (fallback, if no GPU):
+torch>=1.9.0
